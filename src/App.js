@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import React360Image from './component/react360/React360Image';
+import VideoReact from './component/video-react/VideoReact';
+import ReactPlayerComponent from './component/reactPlayer/ReactPlayer';
+import Plyr from './component/plyr/Plyr';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <p>this is in React application</p>
       </header>
+
+      <Route path='/react360' component={React360Image} />
+      <Route path='/video-react' component={VideoReact} />
+      <Route path='/reactplayer/' component={ReactPlayerComponent} />
+      <Route path='/plyr/' component={Plyr} />
     </div>
   );
 }
